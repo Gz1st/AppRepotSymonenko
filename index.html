@@ -1,79 +1,327 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Звіти лабораторних робіт </title>
-    <link rel="stylesheet" href="main.css">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Звіти Лабораторних Робіт</title>
+  <link rel="stylesheet" href="main.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #3a1c1c;
+      color: white;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+        height: 200px; /* задає фіксовану висоту */
+      background-color: #5c2e2e;
+      padding: 20px;
+    }
+
+    .tabs {
+      display: flex;
+      flex-direction: column;
+    }
+
+    input[type="radio"] {
+      display: none;
+    }
+
+    label {
+      background-color: #4caf50;
+      color: white;
+      padding: 10px;
+      cursor: pointer;
+      margin-bottom: 5px;
+    }
+
+    .content {
+      display: none;
+      padding: 15px;
+      background-color: #f1f1f1;
+      border: 1px solid #ccc;
+      color: black;
+      flex-direction: row;
+    }
+
+    input[type="radio"]:checked + label + .content {
+      display: flex;
+    }
+
+    .sidebar {
+      background-color: #5c2e2e;
+      padding: 10px;
+      margin-right: 10px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    button {
+      background-color: #d6b4b4;
+      border: none;
+      color: black;
+      padding: 10px;
+      margin: 5px 0;
+      cursor: pointer;
+      text-align: left;
+    }
+
+    .main-content {
+      flex-grow: 1;
+      background-color: white;
+      color: black;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    .section {
+      display: none;
+    }
+
+    .section.active {
+      display: block;
+    }
+  </style>
 </head>
 <body>
-   <!---------------------------DIV-1----------------------------------------------------------> 
-<div class="div-1"> 
-       <div class="settings-text-div-1">
-          <p class="text-1"><b>Звіти з лабораторних робіт</b></p>
-          <p>З дисципліни: Програмування інтернет застосувань</p>
-          <p>Студент Групи ІПЗ_22_301 Симоненко Дмитро Олександрович</p>
-           <img  class ="photo-div-1"  src="img/5316726143430288544.jpg" alt="photo.jpg">      
+  <header>
+    <img  class="photo" src="img/5316726143430288544.jpg" alt="photo">
+       <div class = "text">
+          <h1 class ="Звіти-з-лабораторних-робіт">Звіти з лабораторних робіт</h1>
+          <h2>З дисципліни: Програмування інтернет застосувань</h2>
+          <h3>Студент Групи ІПЗ_22_301 Симоненко Дмитро Олександрович</h3>
+       </div>
+  </header>
+  <nav class="tabs">
+    <!-- Лабораторна робота 1.1 -->
+    <input type="radio" id="lab1" name="lab" checked>
+    <label for="lab1">Лабораторна робота 1.1</label>
+    <div class="content">
+      <div class="sidebar">
+        <button onclick="showSection('section1')">Опис предметного середовища</button>
+        <button onclick="showSection('section2')">Тема, мета, місце</button>
+        <button onclick="showSection('section3')">Структура документа</button>
+        <button onclick="showSection('section4')">HTML-код таблиць</button>
+        <button onclick="showSection('section5')">HTML-код зображення</button>
+        <button onclick="showSection('section6')">HTML-код списки</button>
+        <button onclick="showSection('section7')">Висновки</button>
+      </div>
+      <div class="main-content">
+        <div class="section" id="section1">
+          <h3>Опис предметного середовища</h3>
+          <p>Тут можна вписати текст для опису предметного середовища.</p>
         </div>
-</div>
-<br>
-<!--------------------------------DIV-2---------------------------------------------------------->
-<div class = div-2>
-        <button class="lab-button">Лабораторна робота 1.1</button>
-        <button class="lab-button">Лабораторна робота 1.2</button>
-        <button class="lab-button">Лабораторна робота 2</button>
-</div>
-<!----------------------------------DIV-3-------------------------------------------->
-<br>
+        <div class="section" id="section2">
+          <h3>Тема, мета, місце</h3>
+          <p>Текст для теми, мети і місця розташування лабораторної роботи.</p>
+        </div>
+        <div class="section" id="section3">
+          <h3>Структура документа</h3>
+          <p>
+<!--------------------------------------------------------------------------------------------->
 
 
-<div class="div-3">
-    <div class="button-end-content">
-      <label for="section1" class="content-button">Опис предметного середовища</label>
-      <label for="section2" class="content-button">Тема, мета, місце розташування лаби 1</label>
-      <label for="section3" class="content-button">Cтруктура документа</label>
-      <label for="section4" class="content-button">HTML-код таблиць</label>
-      <label for="section5" class="content-button">HTML-код зображення</label>
-      <label for="section6" class="content-button">HTML-код списки</label>
-      <label for="section7" class="content-button">Висновки</label>
-  
-      <input type="radio" name="section" id="section1" hidden>
-      <input type="radio" name="section" id="section2" hidden>
-      <input type="radio" name="section" id="section3" hidden>
-      <input type="radio" name="section" id="section4" hidden>
-      <input type="radio" name="section" id="section5" hidden>
-      <input type="radio" name="section" id="section6" hidden>
-      <input type="radio" name="section" id="section7" hidden>
-  
-      <div class="content-box" id="content1">
-        <p>Опис предметного середовища...</p>
-      </div>
-      <div class="content-box" id="content2">
-        <p>Тема, мета, місце розташування лаби 1...</p>
-      </div>
-      <div class="content-box" id="content3">
-        <p>Структура документа...</p>
-      </div>
-      <div class="content-box" id="content4">
-        <p>HTML-код таблиць...</p>
-      </div>
-      <div class="content-box" id="content5">
-        <p>HTML-код зображення...</p>
-      </div>
-      <div class="content-box" id="content6">
-        <p>HTML-код списки...</p>
-      </div>
-      <div class="content-box" id="content7">
-        <p>Висновки...</p>
+<pre>
+    &lt;!DOCTYPE html&gt;
+    &lt;html lang="en"&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+        &lt;title&gt;Звіти лабораторних робіт &lt;/title&gt;
+        &lt;link rel="stylesheet" href="main.css"&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+       &lt;!---------------------------DIV-1----------------------------------------------------------&gt; 
+    &lt;div class="div-1"&gt; 
+           &lt;div class="settings-text-div-1"&gt;
+              &lt;p class="text-1"&gt;&lt;b&gt;Звіти з лабораторних робіт&lt;/b&gt;&lt;/p&gt;
+              &lt;p&gt;З дисципліни: Програмування інтернет застосувань&lt;/p&gt;
+              &lt;p&gt;Студент Групи ІПЗ_22_301 Симоненко Дмитро Олександрович&lt;/p&gt;
+               &lt;img class="photo-div-1" src="img/5316726143430288544.jpg" alt="photo.jpg"&gt;      
+            &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;br&gt;
+    &lt;!--------------------------------DIV-2--------------------------------------------------------&gt;
+    &lt;div class="div-2"&gt;
+            &lt;button class="lab-button"&gt;Лабораторна робота 1.1&lt;/button&gt;
+            &lt;button class="lab-button"&gt;Лабораторна робота 1.2&lt;/button&gt;
+            &lt;button class="lab-button"&gt;Лабораторна робота 2&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;!----------------------------------DIV-3--------------------------------------------&gt;
+    &lt;br&gt;
+    
+    &lt;div class="div-3"&gt;
+        &lt;div class="button-end-content"&gt;
+          &lt;label for="section1" class="content-button"&gt;Опис предметного середовища&lt;/label&gt;
+          &lt;label for="section2" class="content-button"&gt;Тема, мета, місце розташування лаби 1&lt;/label&gt;
+          &lt;label for="section3" class="content-button"&gt;Cтруктура документа&lt;/label&gt;
+          &lt;label for="section4" class="content-button"&gt;HTML-код таблиць&lt;/label&gt;
+          &lt;label for="section5" class="content-button"&gt;HTML-код зображення&lt;/label&gt;
+          &lt;label for="section6" class="content-button"&gt;HTML-код списки&lt;/label&gt;
+          &lt;label for="section7" class="content-button"&gt;Висновки&lt;/label&gt;
+    
+          &lt;input type="radio" name="section" id="section1" hidden&gt;
+          &lt;input type="radio" name="section" id="section2" hidden&gt;
+          &lt;input type="radio" name="section" id="section3" hidden&gt;
+          &lt;input type="radio" name="section" id="section4" hidden&gt;
+          &lt;input type="radio" name="section" id="section5" hidden&gt;
+          &lt;input type="radio" name="section" id="section6" hidden&gt;
+          &lt;input type="radio" name="section" id="section7" hidden&gt;
+    
+          &lt;div class="content-box" id="content1"&gt;
+            &lt;p&gt;Опис предметного середовища...&lt;/p&gt;
+          &lt;/div&gt;
+          &lt;div class="content-box" id="content2"&gt;
+            &lt;p&gt;Тема, мета, місце розташування лаби 1...&lt;/p&gt;
+          &lt;/div&gt;
+          &lt;div class="content-box" id="content3"&gt;
+            &lt;p&gt;Структура документа...&lt;/p&gt;
+          &lt;/div&gt;
+          &lt;div class="content-box" id="content4"&gt;
+            &lt;p&gt;HTML-код таблиць...&lt;/p&gt;
+          &lt;/div&gt;
+          &lt;div class="content-box" id="content5"&gt;
+            &lt;p&gt;HTML-код зображення...&lt;/p&gt;
+          &lt;/div&gt;
+          &lt;div class="content-box" id="content6"&gt;
+            &lt;p&gt;HTML-код списки...&lt;/p&gt;
+          &lt;/div&gt;
+          &lt;div class="content-box" id="content7"&gt;
+            &lt;p&gt;Висновки...&lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+       </pre>
+
+
+<!--------------------------------------------------------------------------------------------->
+
+          </p>
+        </div>
+        <div class="section" id="section4">
+          <h3>HTML-код таблиць</h3>
+          <p>Тут розміщується HTML-код таблиць.</p>
+        </div>
+        <div class="section" id="section5">
+          <h3>HTML-код зображення</h3>
+          <p>Тут розміщується HTML-код для зображення.</p>
+        </div>
+        <div class="section" id="section6">
+          <h3>HTML-код списки</h3>
+          <p>Тут розміщується HTML-код для списків.</p>
+        </div>
+        <div class="section" id="section7">
+          <h3>Висновки</h3>
+          <p>Тут розміщуються висновки.</p>
+        </div>
       </div>
     </div>
-  </div>
-  
-  
-  
 
+    <!-- Лабораторна робота 1.2 -->
+    <input type="radio" id="lab2" name="lab">
+    <label for="lab2">Лабораторна робота 1.2</label>
+    <div class="content">
+      <div class="sidebar">
+        <button onclick="showSection('section8')">Опис предметного середовища</button>
+        <button onclick="showSection('section9')">Тема, мета, місце</button>
+        <button onclick="showSection('section10')">Структура документа</button>
+        <button onclick="showSection('section11')">HTML-код таблиць</button>
+        <button onclick="showSection('section12')">HTML-код зображення</button>
+        <button onclick="showSection('section13')">HTML-код списки</button>
+        <button onclick="showSection('section14')">Висновки</button>
+      </div>
+      <div class="main-content">
+        <div class="section" id="section8">
+          <h3>Опис предметного середовища</h3>
+          <p>Текст для опису предметного середовища лабораторної роботи 1.2.</p>
+        </div>
+        <div class="section" id="section9">
+          <h3>Тема, мета, місце</h3>
+          <p>Текст для теми, мети і місця лабораторної роботи 1.2.</p>
+        </div>
+        <div class="section" id="section10">
+          <h3>Структура документа</h3>
+          <p>Текст для структури документа лабораторної роботи 1.2.</p>
+        </div>
+        <div class="section" id="section11">
+          <h3>HTML-код таблиць</h3>
+          <p>Тут розміщується HTML-код таблиць для лабораторної роботи 1.2.</p>
+        </div>
+        <div class="section" id="section12">
+          <h3>HTML-код зображення</h3>
+          <p>Тут розміщується HTML-код для зображення лабораторної роботи 1.2.</p>
+        </div>
+        <div class="section" id="section13">
+          <h3>HTML-код списки</h3>
+          <p>Тут розміщується HTML-код для списків лабораторної роботи 1.2.</p>
+        </div>
+        <div class="section" id="section14">
+          <h3>Висновки</h3>
+          <p>Тут розміщуються висновки лабораторної роботи 1.2.</p>
+        </div>
+      </div>
+    </div>
 
-
-<!---------------------------------------------------------------------------------------->
-</body>
-</html>
+    <!-- Лабораторна робота 2 -->
+    <input type="radio" id="lab3" name="lab">
+    <label for="lab3">Лабораторна робота 2</label>
+    <div class="content">
+      <div class="sidebar">
+        <button onclick="showSection('section15')">Опис предметного середовища</button>
+        <button onclick="showSection('section16')">Тема, мета, місце</button>
+        <button onclick="showSection('section17')">Структура документа</button>
+        <button onclick="showSection('section18')">HTML-код таблиць</button>
+        <button onclick="showSection('section19')">HTML-код зображення</button>
+        <button onclick="showSection('section20')">HTML-код списки</button>
+        <button onclick="showSection('section21')">Висновки</button>
+      </div>
+      <div class="main-content">
+        <div class="section" id="section15">
+          <h3>Опис предметного середовища</h3>
+          <p>Текст для опису предметного середовища лабораторної роботи 2.</p>
+        </div>
+        <div class="section" id="section16">
+            <h3>Тема, мета, місце</h3>
+            <p>Текст для теми, мети і місця лабораторної роботи 2.</p>
+          </div>
+          <div class="section" id="section17">
+            <h3>Структура документа</h3>
+            <p>Текст для структури документа лабораторної роботи 2.</p>
+          </div>
+          <div class="section" id="section18">
+            <h3>HTML-код таблиць</h3>
+            <p>Тут розміщується HTML-код таблиць для лабораторної роботи 2.</p>
+          </div>
+          <div class="section" id="section19">
+            <h3>HTML-код зображення</h3>
+            <p>Тут розміщується HTML-код для зображення лабораторної роботи 2.</p>
+          </div>
+          <div class="section" id="section20">
+            <h3>HTML-код списки</h3>
+            <p>Тут розміщується HTML-код для списків лабораторної роботи 2.</p>
+          </div>
+          <div class="section" id="section21">
+            <h3>Висновки</h3>
+            <p>Тут розміщуються висновки лабораторної роботи 2.</p>
+          </div>
+        </div>
+      </div>
+    </nav>
+  
+    <script>
+      function showSection(sectionId) {
+        const sections = document.querySelectorAll('.section');
+        sections.forEach(section => {
+          section.classList.remove('active');
+        });
+        document.getElementById(sectionId).classList.add('active');
+      }
+    </script>
+  </body>
+  </html>
+  

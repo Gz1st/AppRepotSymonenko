@@ -1,136 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
-
-
-/*--------------------------DIV-1----------------------------------------*/
-.div-1{
-    padding: 20px; /* Внутрішні відступи */
-    border-radius: 20px; /* Закруглені кути */
-    border: 1px solid #ccc; /* Легка сіра рамка */
-    background-color: #662424; /* Світлий блакитний фон */
-    height: 250px; /* задає фіксовану висоту */
-}
-
-
-.settings-text-div-1{
-    font-family: "Roboto", sans-serif;
-    color: #ffffff; /* Колір тексту */
-}
-.text-1{
-
-    font-size: 30px; /* Розмір тексту */
-    font-weight: bold; /* Жирний текст */
-}
-
-.photo-div-1 {
-    width: 200px; /* Задає ширину зображення */
+.photo{
+   
+    width: 160px; /* Задає ширину зображення */
     height: auto; /* Автоматично змінює висоту відповідно до пропорцій */
-    transform: translate(1250px, -150px); /* Зміщує зображення (50px праворуч і 30px вгору) */
+    transform: translate(1250px, 20px); /* Зміщує зображення (50px праворуч і 30px вгору) */
     border-radius: 20px; /* Закруглення кутів (змінюйте значення для більшого округлення)*/
 }
 
-
-/*--------------------------DIV-2----------------------------------------*/
-
-.div-2{
-   
-    padding: 20px; /* Внутрішні відступи */
-    border-radius: 20px; /* Закруглені кути */
-    border: 1px solid #000000; /* Легка сіра рамка */
-    background-color: #3f7138; /* Світлий блакитний фон */
-    height: 40px; /* задає фіксовану висоту */
-
+.text{
+    position: absolute;
+    top: 20px;   /* Відступ від верхнього краю контейнера */
+    left: 50px; /* Відступ від лівого краю контейнера */
 }
-
-/*--------------BUTTON Div-2--------------*/
-
-  
-  .lab-button {
-
-    padding: 10px 20px; /* Відступи всередині кнопки */
-    font-size: 16px; /* Розмір шрифта на кнопці */
-    background-color: #ffffff; /* Зелений фон кнопки */
-    color: rgb(0, 0, 0); /* Колір тексту на кнопці */
-    border: none; /* Прибираємо рамку */
-    border-radius: 20px; /* Заокруглені кути */
-    cursor: pointer; /* Змінюємо курсор на вказівник */
-    transition: background-color 0.3s ease; /* Анімація зміни фону */
-  }
-  
-  .lab-button:hover {
-    background-color: #a4a4a4; /* Колір фону при наведенні */
-  }
-  
-
-
-  /*---------------------------------DIV-3-------------------------------------*/
-
-  /* Загальні стилі для контейнера */
-.div-3 {
-    display: flex;
-    justify-content: flex-start; /* Розташовує кнопки з лівої сторони */
-    align-items: flex-start;
-    padding: 20px;
-    background-color: #662424;
-    height: 100vh; /* Для того, щоб бачити зміни на весь екран */
-    gap: 20px; /* Відстань між кнопками і контентом */
-  }
-  
-  /* Контейнер кнопок */
-  .button-end-content {
-    display: flex;
-    flex-direction: column; /* Розміщує кнопки вертикально */
-    gap: 10px; /* Відстань між кнопками */
-    flex: 0 0 250px; /* Фіксована ширина для кнопок */
-  }
-  
-  /* Стиль кнопок */
-  .content-button {
-    padding: 10px 20px; /* Відступи всередині кнопки */
-    font-size: 16px; /* Розмір шрифта на кнопці */
-    background-color: #ffffff; /* Білий фон кнопки */
-    color: rgb(0, 0, 0); /* Чорний колір тексту */
-    border: none; /* Прибираємо рамку */
-    border-radius: 20px; /* Заокруглені кути */
-    cursor: pointer; /* Змінюємо курсор на вказівник */
-    transition: background-color 0.3s ease; /* Анімація зміни фону */
-    width: 200px; /* Ширина кнопки */
-  }
-  
-  /* Ефект при наведенні */
-  .content-button:hover {
-    background-color: #bababa; /* Світлий фон при наведенні */
-  }
-  
-  /* Виправлення для фокусу */
-  .content-button:focus {
-    outline: none; /* Прибирає контур при фокусі */
-  }
-  
-  /* Контейнер для відображення контенту */
-  .content-box {
-    display: none;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 20px;
-    margin-top: -374px;
-    margin-left: 300px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    width: 1000px; /* Більший розмір контенту */
-    height: 400px; /* Фіксована висота */
-    overflow-y: auto; /* Якщо контент не вміщується, додається скролл */
-  }
-  
-  /* Коли відповідний радіо-контроль вибраний, показуємо контент */
-  #section1:checked ~ .content-box#content1,
-  #section2:checked ~ .content-box#content2,
-  #section3:checked ~ .content-box#content3,
-  #section4:checked ~ .content-box#content4,
-  #section5:checked ~ .content-box#content5,
-  #section6:checked ~ .content-box#content6,
-  #section7:checked ~ .content-box#content7 {
-    display: block;
-  }
-  
-
-  
+.Звіти-з-лабораторних-робіт{
+    font-size: 40px; /* Розмір шрифту для заголовка h1 */
+}
