@@ -65,23 +65,23 @@
 
   /*---------------------------------DIV-3-------------------------------------*/
 
-  .div-3 {
-    border-radius: 20px; /* Закруглені кути */
+  /* Загальні стилі для контейнера */
+.div-3 {
     display: flex;
     justify-content: flex-start; /* Розташовує кнопки з лівої сторони */
     align-items: flex-start;
     padding: 20px;
-    background-color: #3f7138;
-    height: 100vh; /* Для того щоб бачити зміни на весь екран */
+    background-color: #662424;
+    height: 100vh; /* Для того, щоб бачити зміни на весь екран */
+    gap: 20px; /* Відстань між кнопками і контентом */
   }
-
-/*--------------BUTTON END CONTENT--------------*/
-
   
+  /* Контейнер кнопок */
   .button-end-content {
     display: flex;
     flex-direction: column; /* Розміщує кнопки вертикально */
     gap: 10px; /* Відстань між кнопками */
+    flex: 0 0 250px; /* Фіксована ширина для кнопок */
   }
   
   /* Стиль кнопок */
@@ -99,11 +99,38 @@
   
   /* Ефект при наведенні */
   .content-button:hover {
-    background-color: #a4a4a4; /* Світлий фон при наведенні */
+    background-color: #bababa; /* Світлий фон при наведенні */
   }
   
   /* Виправлення для фокусу */
   .content-button:focus {
     outline: none; /* Прибирає контур при фокусі */
   }
+  
+  /* Контейнер для відображення контенту */
+  .content-box {
+    display: none;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 20px;
+    margin-top: -374px;
+    margin-left: 300px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 1000px; /* Більший розмір контенту */
+    height: 400px; /* Фіксована висота */
+    overflow-y: auto; /* Якщо контент не вміщується, додається скролл */
+  }
+  
+  /* Коли відповідний радіо-контроль вибраний, показуємо контент */
+  #section1:checked ~ .content-box#content1,
+  #section2:checked ~ .content-box#content2,
+  #section3:checked ~ .content-box#content3,
+  #section4:checked ~ .content-box#content4,
+  #section5:checked ~ .content-box#content5,
+  #section6:checked ~ .content-box#content6,
+  #section7:checked ~ .content-box#content7 {
+    display: block;
+  }
+  
+
   
