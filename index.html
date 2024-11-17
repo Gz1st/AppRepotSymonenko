@@ -9,7 +9,7 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background-color: #3a1c1c;
+      background-color: #ffffff;
       color: white;
       margin: 0;
       padding: 0;
@@ -17,7 +17,7 @@
 
     header {
         height: 200px; /* задає фіксовану висоту */
-      background-color: #5c2e2e;
+      background-color: #000000;
       padding: 20px;
     }
 
@@ -31,8 +31,8 @@
     }
 
     label {
-      background-color: #4caf50;
-      color: white;
+      background-color: #787878;
+      color: rgb(255, 255, 255);
       padding: 10px;
       cursor: pointer;
       margin-bottom: 5px;
@@ -43,7 +43,7 @@
       padding: 15px;
       background-color: #f1f1f1;
       border: 1px solid #ccc;
-      color: black;
+      color: rgb(0, 0, 0);
       flex-direction: row;
     }
 
@@ -52,7 +52,7 @@
     }
 
     .sidebar {
-      background-color: #5c2e2e;
+      background-color: #000000;
       padding: 10px;
       margin-right: 10px;
       display: flex;
@@ -60,9 +60,9 @@
     }
 
     button {
-      background-color: #d6b4b4;
+      background-color: #787878;
       border: none;
-      color: black;
+      color: rgb(255, 255, 255);
       padding: 10px;
       margin: 5px 0;
       cursor: pointer;
@@ -72,7 +72,7 @@
     .main-content {
       flex-grow: 1;
       background-color: white;
-      color: black;
+      color: rgb(0, 0, 0);
       padding: 10px;
       border-radius: 5px;
     }
@@ -88,7 +88,7 @@
 </head>
 <body>
   <header>
-    <img  class="photo" src="img/5316726143430288544.jpg" alt="photo">
+    <img  class="photo" src="img/photo_profile.jpg" alt="photo">
        <div class = "text">
           <h1 class ="Звіти-з-лабораторних-робіт">Звіти з лабораторних робіт</h1>
           <h2>З дисципліни: Програмування інтернет застосувань</h2>
@@ -102,21 +102,69 @@
     <div class="content">
       <div class="sidebar">
         <button onclick="showSection('section1')">Опис предметного середовища</button>
-        <button onclick="showSection('section2')">Тема, мета, місце</button>
+        <button onclick="showSection('section2')">Тема, мета, місце розташування лаби 1.1</button>
         <button onclick="showSection('section3')">Структура документа</button>
-        <button onclick="showSection('section4')">HTML-код таблиць</button>
+        <button onclick="showSection('section4')">HTML-код форми</button>
         <button onclick="showSection('section5')">HTML-код зображення</button>
         <button onclick="showSection('section6')">HTML-код списки</button>
         <button onclick="showSection('section7')">Висновки</button>
       </div>
       <div class="main-content">
         <div class="section" id="section1">
+
           <h3>Опис предметного середовища</h3>
-          <p>Тут можна вписати текст для опису предметного середовища.</p>
+          <p>
+            <b>Тема:</b> вебсайт тюнінг-ательє “RaceEssence” <br>
+            <br>
+            <b>Мета:</b> Створення інтернет-магазину, який забезпечить зручний доступ до якісних запчастин<br>
+            для спортивного тюнінгу, а також шин і дисків, сприяючи оптимізації процесу замовлення <br>
+            для користувачів. Це дозволить автолюбителям знайти та купити деталі, що відповідають<br>
+            їхнім потребам для поліпшення вигляду і технічних характеристик своїх автомобілів. <br>
+
+            Сайт призначений для власників спортивних автомобілів та автоентузіастів, які прагнуть<br>
+            поліпшити естетичний вигляд, покращити продуктивність своїх авто або провести<br>
+            спеціалізований тюнінг. Платформа буде пропонувати зручну навігацію, надійну інформацію<br>
+            про товари та простий процес замовлення. <br>
+            <br>
+         <b>Сценарій використання сайту:</b>
+         <br>
+            Авторизація на сайті – Користувач реєструється або входить у свій акаунт. При реєстрації заповнює <br>
+            базову інформацію (ім’я, електронна пошта, номер телефону, адреса доставки), що спрощує процес <br>
+            оформлення замовлення. <br>
+            Перегляд доступних деталей та їх цін – Користувач переходить у каталог, де за допомогою фільтрів<br>
+            (тип деталей, марка та модель автомобіля, ціновий діапазон) обирає потрібні деталі. Біля кожної<br>
+            деталі зазначена ціна, технічні характеристики та фото для ознайомлення. <br>
+            Перегляд докладної інформації про товар – Користувач відкриває сторінку товару, де представлена <br>
+            розширена інформація: характеристики, фото з різних ракурсів, сумісність із конкретними моделями<br>
+            авто та відгуки покупців. <br>
+            Додавання товару до кошика – Обравши товар, користувач додає його до кошика. Можливо додати кілька<br>
+            товарів одночасно та переглянути загальну суму в кошику перед оформленням замовлення. <br>
+            Оформлення замовлення – Користувач переходить до кошика, натискає "Оформити замовлення", перевіряє<br>
+            вміст та обирає спосіб доставки. Потім підтверджує адресу, обирає спосіб оплати<br>
+            (онлайн-оплата, накладений платіж тощо) та завершує оформлення. <br>
+            Підтвердження та статус замовлення – Після оформлення замовлення користувач отримує підтвердження<br>
+            на електронну пошту із деталями замовлення, передбаченими термінами доставки та інструкціями.<br>
+            На сайті можна відслідковувати статус замовлення в особистому кабінеті. <br>
+            Отримання товару та залишення відгуку – Після отримання товару користувач може повернутися на сайт<br>
+            і залишити відгук про товар та обслуговування, що допоможе іншим користувачам у виборі. <br>
+
+          </p>
         </div>
         <div class="section" id="section2">
-          <h3>Тема, мета, місце</h3>
-          <p>Текст для теми, мети і місця розташування лабораторної роботи.</p>
+          <h3>Тема, мета, місце розташування лабораторної 1.1</h3>
+          <p>
+            
+            <b>Тема:</b> Структура HTML-документа. Вибір предметної галузі. <br>
+            робота з посиланнями, таблицями, зображеннями, списками в html-документі.<br>
+            <br>
+            Мета: придбати практичні навички роботи з HTML-документом, таблицями, зображеннями,<br>
+            посиланнями, списками, формами Створити шаблон звітного HTML-документом для відображення <br>
+            результатів роботи всіх лабораторних робіт.<br>
+            <br>
+            <a href="https://gz1st.github.io/AppWebSymonenko/" target="_blank">1. Посилання на живу web-сторінку;</a>
+        
+
+          </p>
         </div>
         <div class="section" id="section3">
           <h3>Структура документа</h3>
@@ -124,79 +172,108 @@
 <!--------------------------------------------------------------------------------------------->
 
 
-<pre>
-    &lt;!DOCTYPE html&gt;
-    &lt;html lang="en"&gt;
-    &lt;head&gt;
-        &lt;meta charset="UTF-8"&gt;
-        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-        &lt;title&gt;Звіти лабораторних робіт &lt;/title&gt;
-        &lt;link rel="stylesheet" href="main.css"&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
-       &lt;!---------------------------DIV-1----------------------------------------------------------&gt; 
-    &lt;div class="div-1"&gt; 
-           &lt;div class="settings-text-div-1"&gt;
-              &lt;p class="text-1"&gt;&lt;b&gt;Звіти з лабораторних робіт&lt;/b&gt;&lt;/p&gt;
-              &lt;p&gt;З дисципліни: Програмування інтернет застосувань&lt;/p&gt;
-              &lt;p&gt;Студент Групи ІПЗ_22_301 Симоненко Дмитро Олександрович&lt;/p&gt;
-               &lt;img class="photo-div-1" src="img/5316726143430288544.jpg" alt="photo.jpg"&gt;      
-            &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;br&gt;
-    &lt;!--------------------------------DIV-2--------------------------------------------------------&gt;
-    &lt;div class="div-2"&gt;
-            &lt;button class="lab-button"&gt;Лабораторна робота 1.1&lt;/button&gt;
-            &lt;button class="lab-button"&gt;Лабораторна робота 1.2&lt;/button&gt;
-            &lt;button class="lab-button"&gt;Лабораторна робота 2&lt;/button&gt;
-    &lt;/div&gt;
-    &lt;!----------------------------------DIV-3--------------------------------------------&gt;
-    &lt;br&gt;
+         <pre>
     
-    &lt;div class="div-3"&gt;
-        &lt;div class="button-end-content"&gt;
-          &lt;label for="section1" class="content-button"&gt;Опис предметного середовища&lt;/label&gt;
-          &lt;label for="section2" class="content-button"&gt;Тема, мета, місце розташування лаби 1&lt;/label&gt;
-          &lt;label for="section3" class="content-button"&gt;Cтруктура документа&lt;/label&gt;
-          &lt;label for="section4" class="content-button"&gt;HTML-код таблиць&lt;/label&gt;
-          &lt;label for="section5" class="content-button"&gt;HTML-код зображення&lt;/label&gt;
-          &lt;label for="section6" class="content-button"&gt;HTML-код списки&lt;/label&gt;
-          &lt;label for="section7" class="content-button"&gt;Висновки&lt;/label&gt;
-    
-          &lt;input type="radio" name="section" id="section1" hidden&gt;
-          &lt;input type="radio" name="section" id="section2" hidden&gt;
-          &lt;input type="radio" name="section" id="section3" hidden&gt;
-          &lt;input type="radio" name="section" id="section4" hidden&gt;
-          &lt;input type="radio" name="section" id="section5" hidden&gt;
-          &lt;input type="radio" name="section" id="section6" hidden&gt;
-          &lt;input type="radio" name="section" id="section7" hidden&gt;
-    
-          &lt;div class="content-box" id="content1"&gt;
-            &lt;p&gt;Опис предметного середовища...&lt;/p&gt;
-          &lt;/div&gt;
-          &lt;div class="content-box" id="content2"&gt;
-            &lt;p&gt;Тема, мета, місце розташування лаби 1...&lt;/p&gt;
-          &lt;/div&gt;
-          &lt;div class="content-box" id="content3"&gt;
-            &lt;p&gt;Структура документа...&lt;/p&gt;
-          &lt;/div&gt;
-          &lt;div class="content-box" id="content4"&gt;
-            &lt;p&gt;HTML-код таблиць...&lt;/p&gt;
-          &lt;/div&gt;
-          &lt;div class="content-box" id="content5"&gt;
-            &lt;p&gt;HTML-код зображення...&lt;/p&gt;
-          &lt;/div&gt;
-          &lt;div class="content-box" id="content6"&gt;
-            &lt;p&gt;HTML-код списки...&lt;/p&gt;
-          &lt;/div&gt;
-          &lt;div class="content-box" id="content7"&gt;
-            &lt;p&gt;Висновки...&lt;/p&gt;
-          &lt;/div&gt;
+
+            &lt;!DOCTYPE html&gt; 
+
+&lt;html&gt; 
+
+    &lt;head&gt; 
+
+        &lt;meta charset="utf-8"&gt; 
+        &lt;title&gt;Race Essence&lt;/title&gt; 
+        &lt;link rel="stylesheet" href="css/main.css"&gt;
+        &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" /&gt; 
+        &lt;link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.0/css/boxicons.min.css" rel="stylesheet"&gt;
+
+    &lt;/head&gt; 
+
+    &lt;body&gt; 
+
+        &lt;!---------------1ST DIV------------------&gt;
+         &lt;div class="first-div"&gt;
+
+         &lt;!-- ----------------BUTTON USER---------------&gt;
+         &lt;a href="user.html" target="_self" class="image-button"&gt;
+            &lt;img src="img/user.png" alt="User Icon"&gt;
+         &lt;/a&gt;
+         &lt;!-- -----------BUTTON MENU-----------------------&gt;
+         &lt;a href="#" class="menu-button"&gt;
+            &lt;img src="img/menu.png" alt="MENU Icon"&gt;
+         &lt;/a&gt;  
+         &lt;!-- --------------------------------------------&gt;
+
+            &lt;h1 class="main-text"&gt;&lt;b&gt;Race Essence&lt;/b&gt;&lt;/h1&gt; 
+            &lt;h2 class="main-text-p2"&gt;BE READY TO RACE&lt;/h2&gt;
+
         &lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/body&gt;
-    &lt;/html&gt;
-       </pre>
+
+        &lt;div&gt;&lt;/div&gt;
+
+        &lt;!-- --------------------------SECOND DIV---------------------------------- --&gt;
+        
+        &lt;div class="second-div"&gt;
+            &lt;div class="item"&gt;
+                &lt;img src="img/wheels.jpg" alt="Wheels"&gt;
+                &lt;p&gt;Wheels&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class="item"&gt;
+                &lt;img src="img/tires.jpg" alt="Tires"&gt;
+                &lt;p&gt;Tires&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class="item"&gt;
+                &lt;img src="img/tuning_parts.jpg" alt="Tuning Parts"&gt;
+                &lt;p&gt;Tuning Parts&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class="item"&gt;
+                &lt;img src="img/sound.jpg" alt="Sound"&gt;
+                &lt;p&gt;Sound&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- -------------------------------Div#3---------------------------------- --&gt;
+        
+        &lt;div class="general-div-3"&gt;
+            &lt;div class="div_3"&gt;
+                &lt;div class="search-container"&gt;
+                    &lt;span class="search-icon"&gt;
+                        &lt;i class='bx bx-search'&gt;&lt;/i&gt;
+                    &lt;/span&gt;
+                    &lt;input type="text" placeholder="specify the car brand" class="search-input"&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        
+            &lt;!-- ------------------------&gt;
+             
+            &lt;div class="text-div-3"&gt;
+                &lt;p&gt;CHOOSE A READY-MADE SETUP FOR YOUR SPORTS&lt;br&gt;
+                CAR FROM WELL-KNOWN TUNING PART BRANDS.&lt;/p&gt;
+        
+                &lt;p class="bottom-text"&gt;Here's how you can easily find tuning for your car. Enter the make &lt;br&gt;
+                and model, and browse the best offers that interest you the most.&lt;/p&gt;
+            &lt;/div&gt;
+            
+            &lt;div class="photo-div3"&gt;
+                &lt;img class="car_back" src="img/car_back.png" alt="car.jpg"&gt;
+                &lt;img class="car_side" src="img/car_side.png" alt="car.jpg"&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;!-- ----------------------DIV-#4---------------------------------------- --&gt;
+
+        &lt;div class="div-4"&gt;
+            &lt;img class="whinter_car" src="img/whinter_car.png" alt="whinter"&gt;
+        &lt;/div&gt;
+        
+
+    &lt;/body&gt; 
+
+&lt;/html&gt;
+
+    
+       
+         </pre>
 
 
 <!--------------------------------------------------------------------------------------------->
@@ -204,12 +281,50 @@
           </p>
         </div>
         <div class="section" id="section4">
-          <h3>HTML-код таблиць</h3>
-          <p>Тут розміщується HTML-код таблиць.</p>
+          <h3>HTML-код форм</h3>
+          <p>
+
+            <pre>
+
+            &lt;form class="llll"&gt;
+    &lt;h1&gt;Login&lt;/h1&gt;
+
+    &lt;div class="input-box"&gt;
+        &lt;input type="text" placeholder="Username" required&gt;
+        &lt;i class='bx bx-user bx-flip-horizontal' style='color:#ffffff' &gt;&lt;/i&gt; 
+    &lt;/div&gt;
+
+    &lt;div class="input-box"&gt;
+        &lt;input type="password" placeholder="password" required&gt;
+        &lt;i class='bx bx-lock-open-alt bx-flip-horizontal' style='color:#ffffff' &gt;&lt;/i&gt;
+    &lt;/div&gt;
+    &lt;div class="remember"&gt;
+        &lt;label for=""&gt;&lt;input type="checkbox"&gt;Remember me&lt;/label&gt;
+        &lt;a href="#"&gt;Forgot password?&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;button type="submit" class="btn"&gt;Login&lt;/button&gt;
+
+    &lt;div class="register-link"&gt;&lt;/div&gt;
+    &lt;p&gt;Don't have an accaunt?&lt;a href="#"&gt;Register&lt;/a&gt; &lt;/p&gt;
+
+&lt;/form&gt;
+
+
+            </pre>
+
+          </p>
         </div>
         <div class="section" id="section5">
           <h3>HTML-код зображення</h3>
-          <p>Тут розміщується HTML-код для зображення.</p>
+          <img  class = "photo_bmw" src="img/bmw_p.jpg" alt="photo_car.jpg">
+
+          <br>
+
+          <p>
+            HTML-код зображення:<br>
+            &lt;img src="img/bmw_p.jpg" alt="pjoto_car.jpg"&gt;
+
+          </p>
         </div>
         <div class="section" id="section6">
           <h3>HTML-код списки</h3>
@@ -217,7 +332,31 @@
         </div>
         <div class="section" id="section7">
           <h3>Висновки</h3>
-          <p>Тут розміщуються висновки.</p>
+          <p>
+
+            <b>Висновок процесу вивчення HTML:</b> <br>
+
+Під час вивчення HTML я набув базових знань, які є основою для створення веб-сторінок. <br>
+HTML (HyperText Markup Language) є мовою розмітки, яка дозволяє структурувати контент <br>
+на веб-сторінці. Я дізнався про основні елементи, такі як заголовки, параграфи, списки,<br>
+ зображення, посилання, таблиці та форми. Особливу увагу я звернув на теги, їх атрибути<br>
+  та важливість правильного синтаксису для коректної роботи веб-сторінок.<br>
+<br>
+Також я навчився використовувати різні атрибути для елементів, наприклад, атрибути для<br>
+ зображень (`src`, `alt`), для посилань (`href`, `target`) і для формових елементів<br>
+  (`type`, `name`, `value`). Ці атрибути допомагають покращити функціональність сторінок<br>
+   і забезпечити зручний доступ для користувачів.<br>
+<br>
+Процес вивчення HTML допоміг мені зрозуміти основи веб-розробки і навчив створювати<br>
+ прості, але функціональні веб-сторінки. Це знання є важливою частиною мого подальшого <br>
+ навчання та професійного розвитку в галузі веб-розробки.<br>
+
+Тепер, маючи ці базові навички, я планую поглиблювати свої знання в галузі CSS і JavaScript,<br>
+ щоб створювати більш складні та інтерактивні веб-додатки.<br>
+
+
+
+          </p>
         </div>
       </div>
     </div>
