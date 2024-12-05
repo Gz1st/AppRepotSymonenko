@@ -28,4 +28,6 @@
     margin-bottom: 5px;  
 }
 
-
+.foto_golovnoi_st{
+    width: 800px; /* Задає ширину зображення */
+}

@@ -829,16 +829,152 @@ Google Fonts — це безкоштовний онлайн-сервіс, яки
       </div>
       <div class="main-content">
         <div class="section" id="section20">
-          <h3>Опис предметного середовища</h3>
-          <p>Тут був я </p>
+          <h3>Тема, місце розашування сайту, звіту</h3>
+          <p>
+            <b>Тема:</b>ВЕРСТКА HTML-ДОКУМЕНТУ. БЛОКОВА ВЕРСТКА.  ВЕРСТКА ЗАСОБАМИ CSS та FLEXBOX. <br>
+            <br>
+            <b>Мета:</b> <br>
+            ⎯придбати практичні навички роботи  верстки сторінок засобами CSS, верстки на основі<br>
+             плаваючих елементів, з’ясувати переваги та недоліки типів макетів веб-сторінок<br>
+            ⎯придбати практичні навички роботи  верстки сторінок засобами CSS та FLEXBOX   <br>
+            <br>
+            <a href="https://gz1st.github.io/AppRepotSymonenko/">1. Посилання на звіт</a> <br> <br>
+            <a href="#">2. Посилання на сайт</a>
+          </p>
         </div>
         <div class="section" id="section21">
-            <h3>Тема, мета, місце</h3>
-            <p>Текст для теми, мети і місця лабораторної роботи 2.</p>
+            <h3>Завдання №1</h3>
+            <p>
+              Мій сайт "Race Essence" використовує статичний макет. Це означає, що структура та дизайн <br>
+              сторінок не змінюються залежно від розміру екрана або пристрою. Все має фіксовані розміри, і контент <br>
+              не адаптується до різних екранів. Тому на мобільних пристроях або планшетах може бути необхідність <br>
+              прокручувати сторінки або змінювати масштаб для зручності перегляду. <br>
+              <br>
+              При верстці сторінок за допомогою CSS я застосовую принцип модульного підходу та адаптивного дизайну. <br>
+              Використовую відносні одиниці вимірювання, такі як `%`, `em`, `rem`, що дозволяють елементам змінювати<br>
+              свої розміри залежно від розміру екрану. Я також використовував **Flexbox** для<br>
+              створення гнучких і стійких макетів. Моя мета — забезпечити зручний перегляд контенту на будь-яких<br>
+              пристроях, незалежно від їх розміру.<br>
+              <br>
+              <br> <br>
+             <b> Фото головної сторінки сайту:</b> <br>
+              <img class="foto_golovnoi_st" src="img/foto_golovnoi_st.png" alt="фото головної сторінки сайту"> <br>
+              <br>
+              <br><br>
+              <br><br>
+              <b>HTML-програмний код макету власного сайту:</b> <br>
+              <br>
+              <br>
+              <pre>
+               
+                &lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Race Essence&lt;/title&gt;
+    &lt;link rel="stylesheet" href="css/main.css"&gt;
+    &lt;script src="https://code.jquery.com/jquery-3.6.0.min.js" defer&gt;&lt;/script&gt;
+    &lt;script src="main.js" defer&gt;&lt;/script&gt;
+    &lt;link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'&gt;
+    &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" /&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;header&gt;
+        &lt;div class="first-div"&gt;
+            &lt;!-- Бокове меню --&gt;
+            &lt;div class="wrapper"&gt;
+                &lt;div class="menu"&gt;
+                    &lt;a href="#" class="close-menu-btn"&gt;
+                        &lt;i class='bx bx-menu-alt-left'&gt;&lt;/i&gt;
+                    &lt;/a&gt;
+                    &lt;nav class="menu-list"&gt;
+                        &lt;a href="#"&gt;MAIN&lt;/a&gt;
+                        &lt;a href="#"&gt;PRODUCTION&lt;/a&gt;
+                        &lt;a href="#"&gt;HISTORY&lt;/a&gt;
+                    &lt;/nav&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;!-- menu-btn --&gt;
+            &lt;a href="#" class="menu-button"&gt;
+                &lt;img src="img/menu.png" alt="MENU Icon"&gt;
+            &lt;/a&gt;
+            &lt;!-- user-btn --&gt;
+            &lt;a href="user.html" target="_self" class="image-button"&gt;
+                &lt;img src="img/user.png" alt="User Icon"&gt;
+            &lt;/a&gt;
+            &lt;!-- text --&gt;
+            &lt;h1 class="main-text"&gt;&lt;b&gt;Race Essence&lt;/b&gt;&lt;/h1&gt;
+            &lt;h2 class="main-text-p2"&gt;BE READY TO RACE&lt;/h2&gt;
+        &lt;/div&gt;
+    &lt;/header&gt;
+
+    &lt;main&gt;
+        &lt;div class="second-div"&gt;
+            &lt;div class="item"&gt;
+                &lt;img src="img/wheels.jpg" alt="Wheels"&gt;
+                &lt;p&gt;Wheels&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class="item"&gt;
+                &lt;img src="img/tires.jpg" alt="Tires"&gt;
+                &lt;p&gt;Tires&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class="item"&gt;
+                &lt;img src="img/tuning_parts.jpg" alt="Tuning Parts"&gt;
+                &lt;p&gt;Tuning Parts&lt;/p&gt;
+            &lt;/div&gt;
+            &lt;div class="item"&gt;
+                &lt;img src="img/sound.jpg" alt="Sound"&gt;
+                &lt;p&gt;Sound&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class="general-div-3"&gt;
+            &lt;div class="div_3"&gt;
+                &lt;div class="search-container"&gt;
+                    &lt;span class="search-icon"&gt;
+                        &lt;i class='bx bx-search'&gt;&lt;/i&gt;
+                    &lt;/span&gt;
+                    &lt;input type="text" placeholder="specify the car brand" class="search-input"&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class="text-div-3"&gt;
+                &lt;p&gt;CHOOSE A READY-MADE SETUP FOR YOUR SPORTS&lt;br&gt; CAR FROM WELL-KNOWN TUNING PART BRANDS.&lt;/p&gt;
+                &lt;p class="bottom-text"&gt;Here's how you can easily find tuning for your car. Enter the make&lt;br&gt; and model, and browse the best offers that interest you the most.&lt;/p&gt;
+            &lt;/div&gt;
+
+            &lt;div class="photo-div3"&gt;
+                &lt;img class="car_back" src="img/car_back.png" alt="car.jpg"&gt;
+                &lt;img class="car_side" src="img/car_side.png" alt="car.jpg"&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class="div-4"&gt;
+            &lt;img class="whinter_car" src="img/tect_p.png" alt="whinter"&gt;
+        &lt;/div&gt;
+    &lt;/main&gt;
+
+    &lt;footer&gt;
+    &lt;/footer&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;
+
+
+
+              </pre>
+
+            </p>
           </div>
           <div class="section" id="section22">
-            <h3>Структура документа</h3>
-            <p>Текст для структури документа лабораторної роботи 2.</p>
+            <h3>Завдання №2</h3>
+            <p>
+              
+            </p>
           </div>
           <div class="section" id="section23">
             <h3>HTML-код таблиць</h3>
@@ -882,6 +1018,89 @@ Google Fonts — це безкоштовний онлайн-сервіс, яки
           </div>
         </div>
       </div>
+
+
+
+      <!----ЛАБОРАТОРНА 2.2----------->
+
+      <input type="radio" id="lab4" name="lab">
+      <label for="lab4">Лабораторна робота 2.2</label>
+      <div class="content">
+        <div class="sidebar">
+          <button onclick="showSection('section33')">Тема Мета Місце розашування сайту, звіту</button>
+          <button onclick="showSection('section34')">ЗАВДАННЯ №1 <br> Зовнішній вигляд макету. Код макету</button>
+          <button onclick="showSection('section35')">ЗАВДАННЯ №2</button>
+          <button onclick="showSection('section36')">ФІКСОВАНА ТАБЛИЧНА ВЕРСТКА</button>
+          <button onclick="showSection('section37')">· Фіксована таблична верстка</button>
+          <button onclick="showSection('section38')">· Гумова блокова верстка</button>
+          <button onclick="showSection('section39')">· Фіксована блокова верстка</button>
+          <button onclick="showSection('section40')">· Гумова блокова верстка</button>
+          <button onclick="showSection('section41')">ЗАВДАННЯ №3 FLEXBOX</button>
+          <button onclick="showSection('section42')">· Сріншот сторінки 'flexbox'</button>
+          <button onclick="showSection('section43')">· HTML-код 'flexbox'</button>
+          <button onclick="showSection('section44')">· CSS-код 'flexbox'</button>
+          <button onclick="showSection('section45')">ВИСНОВКИ</button>
+        </div>
+        <div class="main-content">
+          <div class="section" id="section33">
+            <h3>Опис предметного середовища</h3>
+            <p>Тут був я </p>
+          </div>
+          <div class="section" id="section34">
+              <h3>Тема, мета, місце</h3>
+              <p>Текст для теми, мети і місця лабораторної роботи 2.</p>
+            </div>
+            <div class="section" id="section35">
+              <h3>Структура документа</h3>
+              <p>Текст для структури документа лабораторної роботи 2.</p>
+            </div>
+            <div class="section" id="section36">
+              <h3>HTML-код таблиць</h3>
+              <p>Тут розміщується HTML-код таблиць для лабораторної роботи 2.</p>
+            </div>
+            <div class="section" id="section37">
+              <h3>HTML-код зображення</h3>
+              <p>Тут розміщується HTML-код для зображення лабораторної роботи 2.</p>
+            </div>
+            <div class="section" id="section38">
+              <h3>HTML-код списки</h3>
+              <p>Тут розміщується HTML-код для списків лабораторної роботи 2.</p>
+            </div>
+            <div class="section" id="section39">
+              <h3>Висновки</h3>
+              <p>Тут розміщуються висновки лабораторної роботи 2.</p>
+            </div>
+            <div class="section" id="section40">
+              <h3>Висновки</h3>
+              <p>Тут розміщуються висновки лабораторної роботи 2.</p>
+            </div>
+            <div class="section" id="section41">
+              <h3>Висновки</h3>
+              <p>Тут розміщуються висновки лабораторної роботи 2.</p>
+            </div>
+            <div class="section" id="section42">
+              <h3>Висновки</h3>
+              <p>Тут розміщуються висновки лабораторної роботи 2.</p>
+            </div>
+            <div class="section" id="section43">
+              <h3>Висновки</h3>
+              <p>Тут розміщуються висновки лабораторної роботи 2.</p>
+            </div>
+            <div class="section" id="section44">
+              <h3>Висновки</h3>
+              <p>Тут розміщуються висновки лабораторної роботи 2.</p>
+            </div>
+            <div class="section" id="section45">
+              <h3>Висновки</h3>
+              <p>Тут розміщуються висновки лабораторної роботи 2.</p>
+            </div>
+          </div>
+        </div>
+
+
+
+      <!----ЛАБОРАТОРНА 2.2----------->
+
     </nav>
   
     <script>
