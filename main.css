@@ -31,3 +31,9 @@
 .foto_golovnoi_st{
     width: 800px; /* Задає ширину зображення */
 }
+
+
+.screen{
+    width: 1000px;
+    height: auto;
+}

@@ -1046,24 +1046,239 @@ Google Fonts — це безкоштовний онлайн-сервіс, яки
           <div class="section" id="section28">
             <h3>Завдання №3</h3>
             <p>
+              <b>Сторінка "Професія Java-розробник"</b> створена з використанням HTML для структури <br>
+              та CSS Flexbox для розташування елементів. Вона містить заголовок із коротким<br>
+              описом переваг професії, секцію з покроковим описом навчання у вигляді карток<br>
+              та блоки про рівні навчання з текстом і зображеннями. Дизайн мінімалістичний,<br>
+              із чітким поділом контенту, використанням яскравих акцентів (помаранчевий колір)<br>
+              і зручним вирівнюванням за допомогою Flexbox.<br>
+              <br>
+              <a href="https://gz1st.github.io/AppWebRep/">Посилання на Web-сторінку "Професія Java-розробник"</a>
 
             </p>
           </div>
           <div class="section" id="section29">
-            <h3>Висновки</h3>
-            <p>Тут розміщуються висновки лабораторної роботи 2.</p>
+            <h3>Скріншот</h3>
+            <p>
+              <img  class="screen" src="/img/screen.png" alt="скріншот_сторінки">
+            </p>
           </div>
           <div class="section" id="section30">
-            <h3>Висновки</h3>
-            <p>Тут розміщуються висновки лабораторної роботи 2.</p>
+            <h3>HTML-код</h3>
+            <p>
+              <pre>
+                &lt;!DOCTYPE html&gt;
+&lt;html lang="uk"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Професія Java-розробник&lt;/title&gt;
+    &lt;link rel="stylesheet" href="main.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;!-- Заголовок --&gt;
+    &lt;header class="header"&gt;
+        &lt;h1 class="title"&gt;Професія &lt;span&gt;Java-розробник&lt;/span&gt;&lt;/h1&gt;
+        &lt;div class="header-features"&gt;
+            &lt;div&gt;Портфоліо для старту кар'єри&lt;/div&gt;
+            &lt;div&gt;Навчання на реальних кейсах&lt;/div&gt;
+            &lt;div&gt;Заробіток після 4 місяців навчання&lt;/div&gt;
+            &lt;div&gt;Можна працювати віддалено&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/header&gt;
+
+    &lt;!-- Як проходить навчання --&gt;
+    &lt;section class="steps"&gt;
+        &lt;h2&gt;Як проходить навчання&lt;/h2&gt;
+        &lt;div class="steps-container"&gt;
+            &lt;div class="step"&gt;
+                &lt;div class="step-number"&gt;1&lt;/div&gt;
+                &lt;h3&gt;Дивіться відеолекції&lt;/h3&gt;
+                &lt;p&gt;Якісне відео з зрозумілим поясненням теорії.&lt;/p&gt;
+                &lt;img src="/img/video_1.png" alt="Відео"&gt;
+            &lt;/div&gt;
+            &lt;div class="step"&gt;
+                &lt;div class="step-number"&gt;2&lt;/div&gt;
+                &lt;h3&gt;Робите завдання і відправляєте на перевірку&lt;/h3&gt;
+                &lt;p&gt;Поспішати не треба, вибирайте зручний режим навчання.&lt;/p&gt;
+                &lt;img src="/img/hopo_2.png" alt="Завдання"&gt;
+            &lt;/div&gt;
+            &lt;div class="step"&gt;
+                &lt;div class="step-number"&gt;3&lt;/div&gt;
+                &lt;h3&gt;Чи отримуєте розбір вашої роботи&lt;/h3&gt;
+                &lt;p&gt;Ваш куратор розповість про помилки і про те, як їх виправити.&lt;/p&gt;
+                &lt;img src="/img/hpto_3.png" alt="Розбір роботи"&gt;
+            &lt;/div&gt;
+            &lt;div class="step"&gt;
+                &lt;div class="step-number"&gt;4&lt;/div&gt;
+                &lt;h3&gt;Чи працюєте над помилками&lt;/h3&gt;
+                &lt;p&gt;Проходьте перевірку ще раз, щоб переконатися, що в цей раз все правильно.&lt;/p&gt;
+                &lt;img src="/img/prof-test.png" alt="Помилки"&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+
+    &lt;!-- Рівні навчання --&gt;
+    &lt;section class="levels"&gt;
+        &lt;h2&gt;Рівні навчання&lt;/h2&gt;
+        &lt;div class="level"&gt;
+            &lt;img src="/img/level1.png" alt="Перший рівень"&gt;
+            &lt;div class="level-text"&gt;
+                &lt;h3&gt;Перший рівень: чітка і зрозуміла теорія&lt;/h3&gt;
+                &lt;p&gt;За 4 місяці ви пройдете 16 тем. Ви навчитеся базовим навичкам і створите дипломний проект.&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="level"&gt;
+            &lt;img src="/img/level2.png" alt="Другий рівень"&gt;
+            &lt;div class="level-text"&gt;
+                &lt;h3&gt;Другий рівень: інтенсивна практика&lt;/h3&gt;
+                &lt;p&gt;В складі команди створите власну соціальну мережу та максимально наблизитеся до реальних умов роботи.&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+
+    &lt;!-- Підвал --&gt;
+    &lt;footer class="footer"&gt;
+        &lt;p&gt;© 2024&lt;/p&gt;
+        &lt;div class="icons"&gt;
+            &lt;a href="#"&gt;&lt;img src="facebook.png" alt="Facebook"&gt;&lt;/a&gt;
+            &lt;a href="#"&gt;&lt;img src="youtube.png" alt="YouTube"&gt;&lt;/a&gt;
+            &lt;a href="#"&gt;&lt;img src="telegram.png" alt="Telegram"&gt;&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+              </pre>
+            </p>
           </div>
           <div class="section" id="section31">
-            <h3>Висновки</h3>
-            <p>Тут розміщуються висновки лабораторної роботи 2.</p>
+            <h3>CSS-код</h3>
+            <p>
+              <pre>
+              
+/* Основні стилі */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.6;
+}
+
+h1, h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.title span {
+    background-color: orange;
+    padding: 5px 10px;
+}
+
+.header-features {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    margin: 10px auto;
+    padding: 20px;
+    background-color: #ffcc66;
+}
+
+.steps-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.step {
+    flex: 1 1 calc(25% - 20px);
+    text-align: center;
+    background: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+}
+
+.step img {
+    max-width: 100%;
+    height: auto;
+}
+
+.step-number {
+    background-color: orange;
+    color: white;
+    font-size: 20px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 10px;
+}
+
+.level {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px auto;
+    padding: 10px;
+    max-width: 90%;
+}
+
+.level img {
+    max-width: 45%;
+    height: auto;
+}
+
+.level-text {
+    max-width: 50%;
+}
+
+.footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.footer .icons a {
+    margin: 0 5px;
+}
+
+.footer .icons img {
+    width: 20px;
+    height: 20px;
+}
+
+              </pre>
+            </p>
           </div>
           <div class="section" id="section32">
             <h3>Висновки</h3>
-            <p>Тут розміщуються висновки лабораторної роботи 2.</p>
+            <p>
+              В результаті виконаної роботи було створено повноцінну вебсторінку за допомогою HTMLта CSS із <br>
+              використанням технології Flexbox для адаптивного розташування елементів.Сторінка структурована <br>
+              логічно та візуально відповідає наданому зразку, включаючи заголовки, блоки навчальних <br>
+              етапів, рівні навчання та підвал із іконками соціальних мереж.<br>
+              <br>
+              Основні етапи реалізації: <br>
+              <br>
+              1. Створення структури HTML – використано семантичні теги (header, section, footer), <br>
+              щоб забезпечити зрозумілу та коректну побудову сторінки. <br>
+              <br>
+              2. Реалізація стилізації за допомогою CSS – оформлення контенту із застосуванням кольорових <br>
+              блоків, шрифтів та відступів для забезпечення зручності та привабливості інтерфейсу. <br>
+              <br>
+              3. Flexbox – основний інструмент для гнучкого й адаптивного розташування елементів на <br>
+              сторінці, що дозволяє ефективно компонувати блоки у різних секціях. <br>
+              <br>
+              Результат – отримано зручний, зрозумілий та сучасний інтерфейс, який відповідає вимогам <br>
+              варіанту та демонструє добре організовану структуру. Робота виконана з дотриманням основних <br>
+              принципів веброзробки та візуального дизайну. <br>
+
+            </p>
           </div>
         </div>
       </div>
