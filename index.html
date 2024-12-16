@@ -1291,73 +1291,231 @@ h1, h2 {
       <label for="lab4">Лабораторна робота 2.2</label>
       <div class="content">
         <div class="sidebar">
-          <button onclick="showSection('section33')">Тема Мета Місце розашування сайту, звіту</button>
-          <button onclick="showSection('section34')">ЗАВДАННЯ №1 <br> Зовнішній вигляд макету. Код макету</button>
-          <button onclick="showSection('section35')">ЗАВДАННЯ №2</button>
-          <button onclick="showSection('section36')">ФІКСОВАНА ТАБЛИЧНА ВЕРСТКА</button>
-          <button onclick="showSection('section37')">· Фіксована таблична верстка</button>
-          <button onclick="showSection('section38')">· Гумова блокова верстка</button>
-          <button onclick="showSection('section39')">· Фіксована блокова верстка</button>
-          <button onclick="showSection('section40')">· Гумова блокова верстка</button>
-          <button onclick="showSection('section41')">ЗАВДАННЯ №3 FLEXBOX</button>
-          <button onclick="showSection('section42')">· Сріншот сторінки 'flexbox'</button>
-          <button onclick="showSection('section43')">· HTML-код 'flexbox'</button>
-          <button onclick="showSection('section44')">· CSS-код 'flexbox'</button>
-          <button onclick="showSection('section45')">ВИСНОВКИ</button>
+          <button onclick="showSection('section33')">Тема Мета Місце розашування звіту</button>
+          <button onclick="showSection('section34')">Медіа-запити </button>
+          <button onclick="showSection('section35')">Пояснення</button>
+          <button onclick="showSection('section36')">Висновки</button>
+      
         </div>
         <div class="main-content">
           <div class="section" id="section33">
-            <h3>Опис предметного середовища</h3>
-            <p>Тут був я </p>
+            <h3></h3>
+            <p>
+              <b>Тема:</b>  АДАПТИВНА ВЕРСТКА. МЕДІА-ЗАПИТИ. МЕТАТЕГ VIEWPORT. <br>
+             <br>
+             <b>Мета:</b> Адаптивна верстка. Медіа-запити. Медіа-типи. Медіа-функції. <br>
+             Метатег viewport. Інструменти розробника. Стратегія Mobile First. <br>
+             <br>
+            <b> Постановка задачі:</b> <br>
+             <br>
+             1. У звітному HTML-документі вказати тему та постановку задачі лабораторної роботи №4. <br>
+             2. За допомогою медіа-запитів та CSS-правил розробити адаптивну верстку для трьох версій: <br>
+             - Десктопної (екрани шириною понад 992px), <br>
+             - Планшетної (екрани шириною від 768px до 991px), <br>
+             - Мобільної (екрани шириною до 767px). <br>
+             3. У звітному документі надати пояснення щодо особливостей створення десктопної, планшетної та мобільної версії. <br>
+             Перевірити адаптивність сторінки за допомогою інструментів розробника браузера. <br>
+             <br>
+             <a href="https://gz1st.github.io/AppRepotSymonenko/" target="_blank">Місце розашування звіту </a>
+            </p>
           </div>
           <div class="section" id="section34">
-              <h3>Тема, мета, місце</h3>
-              <p>Текст для теми, мети і місця лабораторної роботи 2.</p>
+              <h3>HTML та CSS з медіа-запитами для адаптивної верстки/h3>
+              <p>
+                <b>1. Структура HTML-коду:</b> <br>
+                <pre>
+                  &lt;!DOCTYPE html&gt;
+&lt;html lang="uk"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Адаптивна верстка&lt;/title&gt;
+    &lt;link rel="stylesheet" href="styles.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;header class="header"&gt;
+        &lt;h1&gt;Адаптивна верстка&lt;/h1&gt;
+    &lt;/header&gt;
+
+    &lt;main class="main-content"&gt;
+        &lt;section class="content"&gt;
+            &lt;h2&gt;Основний контент&lt;/h2&gt;
+            &lt;p&gt;Це приклад адаптивної верстки для різних пристроїв: десктопів, планшетів та мобільних телефонів.&lt;/p&gt;
+        &lt;/section&gt;
+
+        &lt;section class="gallery"&gt;
+            &lt;h2&gt;Галерея&lt;/h2&gt;
+            &lt;div class="images"&gt;
+                &lt;div class="image-box"&gt;Зображення 1&lt;/div&gt;
+                &lt;div class="image-box"&gt;Зображення 2&lt;/div&gt;
+                &lt;div class="image-box"&gt;Зображення 3&lt;/div&gt;
+                &lt;div class="image-box"&gt;Зображення 4&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/section&gt;
+    &lt;/main&gt;
+
+    &lt;footer class="footer"&gt;
+        &lt;p&gt;© 2024 Адаптивна сторінка&lt;/p&gt;
+    &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+ 
+<br>
+<br>
+<br>
+<br>
+<b>2. CSS-стилі з медіа-запитами для адаптивності:</b> <br>
+               <br>
+               <pre>
+                /* Основні стилі */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.6;
+}
+
+h1, h2 {
+    text-align: center;
+    margin: 10px 0;
+}
+
+p {
+    text-align: center;
+    margin: 0 10px;
+}
+
+.header, .footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.main-content {
+    padding: 20px;
+}
+
+.gallery .images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.image-box {
+    background-color: #ffcc66;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    flex: 1 1 calc(25% - 10px); /* Десктопна версія: 4 елементи в рядок */
+}
+
+/* Адаптивна верстка */
+/* Планшетна версія */
+@media (max-width: 991px) {
+    .image-box {
+        flex: 1 1 calc(50% - 10px); /* 2 елементи в рядок */
+    }
+
+    .main-content {
+        padding: 10px;
+    }
+
+    .gallery h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Мобільна версія */
+@media (max-width: 767px) {
+    .image-box {
+        flex: 1 1 100%; /* 1 елемент на всю ширину */
+    }
+
+    .header, .footer {
+        font-size: 1rem;
+    }
+
+    .gallery h2 {
+        font-size: 1.25rem;
+    }
+}
+
+               </pre>
+              
+              </p>
             </div>
             <div class="section" id="section35">
-              <h3>Структура документа</h3>
-              <p>Текст для структури документа лабораторної роботи 2.</p>
+              <h3>Пояснення</h3>
+              <p>
+
+                <b>1. Десктопна версія</b> <br>
+
+                 - Десктопна версія призначена для великих екранів із шириною від 992px і більше. <br>
+                 - Використовується гнучкий блоковий підхід для відображення елементів у 4 колонки в секції "Галерея". <br>
+                 - CSS-правило для блоків: <br>
+                 <pre>
+                  .image-box {
+                    flex: 1 1 calc(25% - 10px); /* 4 блоки на рядок */
+                }
+                 </pre>
+
+                 <br>
+                 <br>
+                 <b>2. Планшетна версія</b> <br>
+
+                  - Планшетна версія активується для екранів із шириною до 991px. <br>
+                  - За допомогою медіа-запиту змінюється кількість колонок у секції "Галерея" — блоки відображаються у 2 колонки. <br>
+                  - Медіа-запит: <br>
+                  <pre>
+                    @media (max-width: 991px) {
+                      .image-box {
+                          flex: 1 1 calc(50% - 10px); /* 2 блоки на рядок */
+                      }
+                  }
+                  
+                  </pre>
+                  <br>
+                  <br>
+                  <br>
+                  <b> 3. Мобільна версія</b> <br>
+
+                   - Мобільна версія створена для екранів із шириною до 767px. <br>
+                   - За допомогою медіа-запиту блоки у секції "Галерея" відображаються по одному в рядок, займаючи всю ширину екрану. <br>
+                   - Медіа-запит: <br>
+                   <pre>
+                    @media (max-width: 767px) {
+                      .image-box {
+                          flex: 1 1 100%; /* 1 блок на весь рядок */
+                      }
+                  }                  
+                   </pre>
+                
+              </p>
             </div>
             <div class="section" id="section36">
-              <h3>HTML-код таблиць</h3>
-              <p>Тут розміщується HTML-код таблиць для лабораторної роботи 2.</p>
-            </div>
-            <div class="section" id="section37">
-              <h3>HTML-код зображення</h3>
-              <p>Тут розміщується HTML-код для зображення лабораторної роботи 2.</p>
-            </div>
-            <div class="section" id="section38">
-              <h3>HTML-код списки</h3>
-              <p>Тут розміщується HTML-код для списків лабораторної роботи 2.</p>
-            </div>
-            <div class="section" id="section39">
               <h3>Висновки</h3>
-              <p>Тут розміщуються висновки лабораторної роботи 2.</p>
+              <p>
+                У ході виконання лабораторної роботи було створено адаптивну веб-сторінку з використанням <br>
+                медіа-запитів, метатега viewport та технології CSS Flexbox. Реалізовано три версії <br>
+                дизайну: десктопну, планшетну та мобільну, що дозволяє коректно відображати контент<br>
+                на екранах різних розмірів.<br>
+<br>
+                Для досягнення адаптивності: <br>
+<br>
+                - Використано медіа-запити для зміни стилів залежно від ширини екрану.<br>
+                - Впроваджено гнучке розташування елементів за допомогою Flexbox, що дозволяє легко управляти блоками на сторінці.<br>
+                - Застосовано метатег viewport, який забезпечує правильне масштабування сторінки на мобільних пристроях.<br>
+                <br>
+                В результаті виконання завдання отримано веб-сторінку, яка є зручною та функціональною для користувачів <br>
+                на будь-яких пристроях, що відповідає вимогам сучасного веб-дизайну. <br>
+
+              </p>
             </div>
-            <div class="section" id="section40">
-              <h3>Висновки</h3>
-              <p>Тут розміщуються висновки лабораторної роботи 2.</p>
-            </div>
-            <div class="section" id="section41">
-              <h3>Висновки</h3>
-              <p>Тут розміщуються висновки лабораторної роботи 2.</p>
-            </div>
-            <div class="section" id="section42">
-              <h3>Висновки</h3>
-              <p>Тут розміщуються висновки лабораторної роботи 2.</p>
-            </div>
-            <div class="section" id="section43">
-              <h3>Висновки</h3>
-              <p>Тут розміщуються висновки лабораторної роботи 2.</p>
-            </div>
-            <div class="section" id="section44">
-              <h3>Висновки</h3>
-              <p>Тут розміщуються висновки лабораторної роботи 2.</p>
-            </div>
-            <div class="section" id="section45">
-              <h3>Висновки</h3>
-              <p>Тут розміщуються висновки лабораторної роботи 2.</p>
-            </div>
+            
           </div>
         </div>
 
