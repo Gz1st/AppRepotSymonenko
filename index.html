@@ -1518,8 +1518,335 @@ p {
             
           </div>
         </div>
+ 
+        <!--ЛАБОРАТОРНА РОБОТА 3.1-->
+        <input type="radio" id="lab5" name="lab">
+        <label for="lab5">Лабораторна робота 3.1</label>
+        <div class="content">
+          <div class="sidebar">
+            <button onclick="showSection('section37')">Тема Мета Місце розашування звіту</button>
+            <button onclick="showSection('section38')">ЗАВДАННЯ №1</button>
+            <button onclick="showSection('section39')">ЗАВДАННЯ №2</button>
+            <button onclick="showSection('section40')">ЗАВДАННЯ №3</button>
+            <button onclick="showSection('section41')">ЗАВДАННЯ №4</button>
+            <button onclick="showSection('section42')">ЗАВДАННЯ №5</button>
+            <button onclick="showSection('section43')">ВИСНОВКИ</button>
 
+          </div>
+          <div class="main-content">
+            <div class="section" id="section37">
+              <h3></h3>
+              <p>
+                <b>Тема:</b>  ФУНКЦІОНАЛЬНЕ ЗАСТОСУВАННЯ JAVASCRIPT У HTML-ДОКУМЕНТІ. <br>
+                ВИКОРИСТАННЯ МАСИВІВ У JS-СЦЕНАРІЯХ. РЕАЛІЗАЦІЯ ПРОГРАМ ЗАСОВАМИ МОВИ JAVASCRIPT <br>
+                <br>
+                <b>Мета:</b> придбати практичні навички роботи з конструкціями мови JS, масивами та <br>
+                 фугкціями у js-сценаріях.  Реалізація програм засовами мови JAVASCRIPT <br>
+                 <br>
+                 <a href="https://github.com/Gz1st/AppWebSymonenko">1.Посилання на репозиторій власного WEB-застосунку</a> <br>
+                 <a href="https://gz1st.github.io/AppWebSymonenko/">2. Посилання на на живу сторінку власного WEB-застосунку</a> <br>
+                 <a href="https://github.com/Gz1st/AppRepotSymonenko">3. Посилання на репозиторій звітного HTML-документу</a> <br>
+                 <a href="https://gz1st.github.io/AppRepotSymonenko/">4. Посилання на живу сторінку звітного HTML-документу</a> <br>
+                 <br>
+              </p>
+            </div>
+            <div class="section" id="section38">
+              <h3>ЗАВДАННЯ №1</h3>
+              <p>
+                Реалізація функції makeTransaction відповідно до вашого завдання: <br>
+                <br>
+                <pre>
+                  function makeTransaction(quantity, pricePerDroid) {
+                    const totalPrice = quantity * pricePerDroid;
+                    return `You ordered ${quantity} droids worth ${totalPrice} credits!`;
+                  }
+                </pre>
 
+              </p>
+            </div>
+            <div class="section" id="section39">
+              <h3>ЗАВДАННЯ №2</h3>
+              <p>Реалізація функції checkForSpam, яка перевіряє рядок на наявність заборонених слів <br>
+                 spam і sale, незалежно від регістру:</p> <br>
+                 <br>
+                 <pre>
+                  function checkForSpam(message) {
+                    // Приводимо рядок до нижнього регістру
+                    const normalizedMessage = message.toLowerCase();
+                  
+                    // Перевіряємо наявність слів "spam" або "sale"
+                    if (normalizedMessage.includes("spam") || normalizedMessage.includes("sale")) {
+                      return true;
+                    }
+                  
+                    return false;
+                  }
+                  
+                 </pre>
+            </div>
+            <div class="section" id="section40">
+              <h3>ЗАВДАННЯ №3</h3>
+              <p>
+                Реалізація функції filterArray, яка виконує завдання фільтрації чисел із масиву, що <br>
+                є більшими за задане значення value. <br>
+                <br>
+                <pre>
+                  function filterArray(numbers, value) {
+                    // Створюємо порожній масив для збереження підходящих чисел
+                    const filteredNumbers = [];
+                  
+                    // Ітеруємо кожен елемент масиву numbers
+                    for (let i = 0; i < numbers.length; i++) {
+                      // Перевіряємо, чи число більше за значення value
+                      if (numbers[i] > value) {
+                        filteredNumbers.push(numbers[i]); // Додаємо число до нового масиву
+                      }
+                    }
+                  
+                    // Повертаємо новий масив
+                    return filteredNumbers;
+                  }
+                  
+                </pre>
+              </p>
+            </div>
+            <div class="section" id="section41">
+              <h3>ЗАВДАННЯ №4</h3>
+              <p>
+                Завдання 1: Створення масиву, пошук максимального серед парних елементів та мінімального серед <br>
+                елементів із парними індексами. <br>
+                <br>
+                Завдання 2: Сортування масиву методом вставки. <br>
+                <br>
+                <pre>
+                  // Функція для створення масиву заданого розміру
+function createArray(size) {
+  const array = [];
+  for (let i = 0; i < size; i++) {
+    array.push(Math.floor(Math.random() * 100)); // Заповнюємо випадковими числами від 0 до 99
+  }
+  return array;
+}
+
+// Функція для пошуку максимального серед парних елементів
+function findMaxEvenElement(array) {
+  let maxEven = -Infinity;
+  for (let num of array) {
+    if (num % 2 === 0 && num > maxEven) {
+      maxEven = num;
+    }
+  }
+  return maxEven;
+}
+
+// Функція для пошуку мінімального серед елементів з парними індексами
+function findMinAtEvenIndex(array) {
+  let minAtEvenIndex = Infinity;
+  for (let i = 0; i < array.length; i += 2) {
+    if (array[i] < minAtEvenIndex) {
+      minAtEvenIndex = array[i];
+    }
+  }
+  return minAtEvenIndex;
+}
+
+// Функція для заміни елементів у масиві
+function swapElements(array, element1, element2) {
+  const index1 = array.indexOf(element1);
+  const index2 = array.indexOf(element2);
+  if (index1 !== -1 && index2 !== -1) {
+    [array[index1], array[index2]] = [array[index2], array[index1]];
+  }
+}
+
+// Функція сортування методом вставки
+function insertionSort(array) {
+  for (let i = 1; i < array.length; i++) {
+    let key = array[i];
+    let j = i - 1;
+    while (j >= 0 && array[j] > key) {
+      array[j + 1] = array[j];
+      j--;
+    }
+    array[j + 1] = key;
+  }
+}
+
+// Основна функція для виконання завдання
+function main() {
+  const size = parseInt(prompt("Введіть кількість елементів у масиві: "), 10);
+  if (isNaN(size) || size <= 0) {
+    console.log("Некоректний ввід! Введіть додатнє число.");
+    return;
+  }
+
+  const array = createArray(size);
+  console.log("Вхідний масив:", array);
+
+  const maxEven = findMaxEvenElement(array);
+  const minEvenIndex = findMinAtEvenIndex(array);
+
+  console.log("Максимальний серед парних елементів:", maxEven);
+  console.log("Мінімальний серед елементів з парними індексами:", minEvenIndex);
+
+  // Міняємо місцями знайдені елементи
+  swapElements(array, maxEven, minEvenIndex);
+  console.log("Масив після заміни елементів:", array);
+
+  // Сортуємо масив методом вставки
+  insertionSort(array);
+  console.log("Відсортований масив (метод вставки):", array);
+}
+
+// Викликаємо основну функцію
+main();
+
+                </pre>
+              </p>
+            </div>
+            <div class="section" id="section42">
+              <h3>ЗАВДАННЯ №5</h3>
+              <p>
+                HTML-форми реєстрації з JavaScript-валідацією для перевірки: <br>
+<br>
+                Цілого числа (поле для віку), <br>
+                Дійсного числа (поле для балів), <br>
+                Дати у форматі DD.MM.YYYY, <br>
+                Однаковості паролів (основний та підтвердження), <br>
+                Заповнення обов'язкових полів, позначених *. <br>
+                <br>
+                 <pre>
+                  &lt;!DOCTYPE html&gt;
+&lt;html lang="uk"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Валідація форми реєстрації&lt;/title&gt;
+  &lt;style&gt;
+    .error { color: red; font-size: 14px; }
+    label { display: block; margin-bottom: 8px; }
+    input { margin-bottom: 10px; }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h2&gt;Форма реєстрації&lt;/h2&gt;
+  &lt;form id="registrationForm" novalidate&gt;
+    &lt;label&gt;Ім'я (*): &lt;input type="text" id="name" required&gt;&lt;/label&gt;
+    &lt;span id="nameError" class="error"&gt;&lt;/span&gt;
+
+    &lt;label&gt;Вік (ціле число *): &lt;input type="text" id="age" required&gt;&lt;/label&gt;
+    &lt;span id="ageError" class="error"&gt;&lt;/span&gt;
+
+    &lt;label&gt;Бали (дійсне число): &lt;input type="text" id="score"&gt;&lt;/label&gt;
+    &lt;span id="scoreError" class="error"&gt;&lt;/span&gt;
+
+    &lt;label&gt;Дата народження (DD.MM.YYYY *): &lt;input type="text" id="dob" required&gt;&lt;/label&gt;
+    &lt;span id="dobError" class="error"&gt;&lt;/span&gt;
+
+    &lt;label&gt;Пароль (*): &lt;input type="password" id="password" required&gt;&lt;/label&gt;
+    &lt;span id="passwordError" class="error"&gt;&lt;/span&gt;
+
+    &lt;label&gt;Підтвердження пароля (*): &lt;input type="password" id="confirmPassword" required&gt;&lt;/label&gt;
+    &lt;span id="confirmPasswordError" class="error"&gt;&lt;/span&gt;
+
+    &lt;button type="submit"&gt;Зареєструватися&lt;/button&gt;
+  &lt;/form&gt;
+
+  &lt;script&gt;
+    // Основна функція валідації форми
+    document.getElementById('registrationForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Запобігаємо відправці форми, якщо є помилки
+      let isValid = true;
+
+      // Очищення попередніх помилок
+      const errors = document.querySelectorAll('.error');
+      errors.forEach(error => error.textContent = '');
+
+      // Отримання значень полів
+      const name = document.getElementById('name').value.trim();
+      const age = document.getElementById('age').value.trim();
+      const score = document.getElementById('score').value.trim();
+      const dob = document.getElementById('dob').value.trim();
+      const password = document.getElementById('password').value;
+      const confirmPassword = document.getElementById('confirmPassword').value;
+
+      // Валідація обов'язкових полів
+      if (!name) {
+        document.getElementById('nameError').textContent = 'Це поле обов\'язкове!';
+        isValid = false;
+      }
+
+      // Валідація цілого числа для віку
+      if (!/^\d+$/.test(age)) {
+        document.getElementById('ageError').textContent = 'Введіть ціле число!';
+        isValid = false;
+      }
+
+      // Валідація дійсного числа для балів
+      if (score && !/^\d+(\.\d+)?$/.test(score)) {
+        document.getElementById('scoreError').textContent = 'Введіть коректне дійсне число!';
+        isValid = false;
+      }
+
+      // Валідація дати у форматі DD.MM.YYYY
+      if (!/^\d{2}\.\d{2}\.\d{4}$/.test(dob)) {
+        document.getElementById('dobError').textContent = 'Дата повинна бути у форматі DD.MM.YYYY!';
+        isValid = false;
+      }
+
+      // Валідація паролів
+      if (!password) {
+        document.getElementById('passwordError').textContent = 'Це поле обов\'язкове!';
+        isValid = false;
+      }
+      if (password !== confirmPassword) {
+        document.getElementById('confirmPasswordError').textContent = 'Паролі не співпадають!';
+        isValid = false;
+      }
+
+      // Відправка форми, якщо валідація успішна
+      if (isValid) {
+        alert('Форма успішно відправлена!');
+        this.submit();
+      }
+    });
+  &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+                 </pre>
+              </p>
+            </div>
+            <div class="section" id="section43">
+              <h3>Висновки</h3>
+              <p>
+Під час виконання лабораторної роботи ми розробили та реалізували кілька функцій для обробки даних у JavaScript, а саме: <br>
+
+1. **Функція `makeTransaction(quantity, pricePerDroid)`**: ця функція обчислює загальну вартість замовлених дроїдів та <br>
+ повертає повідомлення у форматі: "You ordered `<quantity>` droids worth `<totalPrice>` credits!". <br>
+2. **Функція `checkForSpam(message)`**: функція перевіряє, чи містить рядок заборонені слова "spam" або "sale" незалежно<br>
+ від регістру символів, і повертає булеве значення `true` або `false` залежно від результату перевірки.<br>
+3. **Функція `filterArray(numbers, value)`**: ця функція приймає масив чисел та значення, і повертає новий масив, що містить<br>
+ лише ті числа з початкового масиву, які більші за задане значення.<br>
+4. **Обробка одновимірного масиву**: ми створили одновимірний масив із кількістю елементів, заданою користувачем, знайшли <br>
+ максимальний серед парних елементів та мінімальний серед елементів з парними індексами, поміняли їх місцями та вивели <br>
+ вхідний і вихідний масиви.<br>
+5. **Сортування масиву методом вставки**: застосували алгоритм сортування вставками для впорядкування вихідного масиву за зростанням.<br>
+6. **Валідація HTML-форми реєстрації користувача**: розробили механізм перевірки введених даних у HTML-формі, що включає <br>
+ перевірку цілого та дійсного числа, дати у форматі DD.MM.YYYY, відповідності паролів та обов'язкових полів, позначених (*).<br>
+<br>
+**Висновки:**<br>
+
+Виконання цих завдань дозволило нам:<br>
+- Поглибити знання з розробки функцій у JavaScript для обробки та маніпуляції даними.<br>
+- Опанувати методи пошуку та заміни елементів у масивах, а також алгоритми сортування, зокрема метод вставки. <br>
+- Засвоїти принципи валідації даних у HTML-формах, що є критично важливим для забезпечення коректності та безпеки <br>
+введеної користувачем інформації.<br>
+Загалом, лабораторна робота сприяла розвитку практичних навичок програмування та роботи з веб-технологіями, що є<br>
+необхідним для подальшого професійного зростання у сфері розробки програмного забезпечення. <br>
+              </p>
+            </div>
+            
 
       <!----ЛАБОРАТОРНА 2.2----------->
 
