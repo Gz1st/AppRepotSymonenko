@@ -1846,12 +1846,124 @@ main();
 необхідним для подальшого професійного зростання у сфері розробки програмного забезпечення. <br>
               </p>
             </div>
-            
+          </div>
+        </div>
 
-      <!----ЛАБОРАТОРНА 2.2----------->
+        <input type="radio" id="lab6" name="lab">
+        <label for="lab6">Лабораторна робота 3.2</label>
+        <div class="content">
+          <div class="sidebar">
+            <button onclick="showSection('section44')">Тема Мета Місце розашування звіту</button>
+            <button onclick="showSection('section45')">ОПИС ЗАВДАННЯ </button>
+            <button onclick="showSection('section46')">ВИКОНАННЯ</button>
+            <button onclick="showSection('section47')">ВИСНОВКИ</button>           
+      
+
+          </div>
+          <div class="main-content">
+            <div class="section" id="section44">
+              <h3></h3>
+              <p>
+                 <b>Тема:</b> ОБ'ЄКТ. МЕТОДИ ОБ'ЄКТА. МАСИВ ОБ'ЄКТІВ. ДЕСТРУКТУРИЗАЦІЯ ОБ'ЄКТІВ. CALLBACK. СТРІЛОЧНІ ФУНКЦІЇ. СТРІЛОЧНІ ФУНКЦІЇ ЯК КОЛБЕКИ. <br>
+                 <br>
+                 <b>Мета:</b> придбати практичні навички роботи з об'єктами. Методи об'єкта.. Callback. Стрілочні функції. Стрілочні функції як колбеки. <br>
+                 Реалізація програм засовами мови JAVASCRIPT. <br>
+                 <br>
+
+              </p>
+            </div>
+            <div class="section" id="section45">
+              <h3>ОПИС</h3>
+              <p>
+                   <b> Варіант №1</b> <br>
+                   <br>
+            
+                <b>Напишіть наступні функції:</b> <br>
+                createProduct(obj, callback) - приймає об'єкт товару без id, а також коллбек. Функція створює об'єкт товару, <br>
+                додаючи йому унікальний ідентифікатор у властивість id та викликає коллбек передаючи йому створений об'єкт. <br>
+                logProduct(product) - колббек що приймає об'єкт продукту і логуючий його в консоль <br>
+                logTotalPrice(product) - колббек, що приймає об'єкт продукту і логіює загальну вартість товару в консоль <br>
+              </p>
+            </div>
+            <div class="section" id="section46">
+              <h3>Виконання</h3>
+              <p>
+                Реалізація функцій createProduct, logProduct та logTotalPrice у JavaScript: <br>
+                 <br>
+                 <pre>
+                  // Функція createProduct приймає об'єкт товару без id та колбек
+function createProduct(obj, callback) {
+  // Генерація унікального id для товару
+  const id = Date.now();
+  // Створення нового об'єкта товару з id
+  const product = { ...obj, id };
+  // Виклик колбеку з передачею створеного продукту
+  callback(product);
+}
+
+// Колбек logProduct, що приймає об'єкт продукту та виводить його в консоль
+function logProduct(product) {
+  console.log('Product:', product);
+}
+
+// Колбек logTotalPrice, що приймає об'єкт продукту та виводить загальну вартість
+function logTotalPrice(product) {
+  const totalPrice = product.price * product.quantity;
+  console.log(`Total Price: ${totalPrice}`);
+}
+
+// Приклад використання
+const newProduct = {
+  name: 'Laptop',
+  price: 1000,
+  quantity: 2
+};
+
+createProduct(newProduct, logProduct);
+createProduct(newProduct, logTotalPrice);
+
+                 </pre>
+              <br>
+              <br>
+              <br>
+              <b>Результат виконання:</b> <br>
+              <br>
+              <pre>
+                Product: { name: 'Laptop', price: 1000, quantity: 2, id: 1639933200000 }
+                Total Price: 2000
+
+              </pre>
+              </p>
+            </div>
+            <div class="section" id="section47">
+              <h3>Висновок</h3>
+              <p> 
+                Під час виконання лабораторної роботи я розробив функції для створення товару з унікальним <br>
+                ідентифікатором та обробки його даних за допомогою колбеків. <br>
+                <br>
+               <b>Основні результати роботи:</b>
+                Функція createProduct: приймає об'єкт товару без id, генерує унікальний ідентифікатор за  <br>
+                допомогою Date.now(), додає його до об'єкта та викликає переданий колбек з цим об'єктом. <br>
+                Колбек logProduct: приймає об'єкт продукту та виводить його в консоль. <br>
+                Колбек logTotalPrice: приймає об'єкт продукту, обчислює загальну вартість, множачи price на <br>
+                quantity, та виводить результат у консоль. <br>
+              </p>
+            </div>
+          </div>
+        </div>
+        
+                
+                
+             
+                
+
+
+
+
 
     </nav>
-  
+
+
     <script>
       function showSection(sectionId) {
         const sections = document.querySelectorAll('.section');
